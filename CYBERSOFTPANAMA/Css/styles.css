@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+       
+       /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+ 
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #16384c;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Estilos del encabezado */
+
+        .nav{
+            background-color: rgb(19,84,126);
+            height: 80px;
+            color: #fff;
+            width: 100%;
+            position: fixed;
+            z-index: 2;
+        
+        }
+
+        .nav_logo{
+            font-size: 1.5em;
+            height: 900;
+        }
+
+        .nav_menu{
+            display: grid;
+            grid-auto-flow: column;
+            gap: 3em;
+            
+        }
+
+        .nav_input, .nav_label{
+            display: none;
+        }
+
+        .nav_container{
+            display: flex;
+            height: 100%;
+            width: 97%;
+            margin: 0 auto;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav_items::after{
+            content: "";
+            display: block;
+            background: #fff;
+            width: 90%;
+            margin-top: 3px;
+            height: 3px;
+            clip-path: var(--clippy);
+            transition: clip-path .5s;
+        }
+        .nav_items{
+            color: #fff;
+            text-decoration: none;
+            --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+           
+        }
+
+        .nav_items:hover{
+            --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            color: #ff6600;
+        }
+
+
+        /* Estilos del contenido principal */
+
+        .servicios{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            
+        }
+        .main {
+            width: 100%; /* Cambia el ancho al 100% para ocupar el ancho disponible */
+            max-width: 1100px; /* Puedes definir un ancho máximo si es necesario */
+            margin: 0 auto; /* Esto centra el contenedor */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 30px;
+            padding-top: 150px;        }
+
+      
+        .main .card {
+            position: relative;
+            max-width: 300px;
+            height: 215px;
+            background: #fff;
+            margin: 30px 10px;
+            padding: 20px 20px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+            transition: 0.3s ease-in-out;
+            border-radius: 10px;
+        }
+
+        .main .card .imgBx {
+            position: relative;
+            width: 260px;
+            height: 260px;
+            top: -60px;
+           
+            z-index: 1;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .main .card .imgBx img {
+            max-width: 100%;
+            border-radius: 4px;
+        }
+
+        .main .card .content {
+            position: relative;
+            margin-top: -120px;
+            padding: 10px 15px;
+            text-align: center;
+            color: #111;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.3s ease-in-out;
+        }
+
+        .main .card:hover .content {
+            visibility: visible;
+            opacity: 1;
+            margin-top: -40px;
+            transition-delay: 0.3s;
+        }
+        .main .card:hover {
+            height: 465px;
+        }
+
+        .main .card h3 {
+            color: #000000;
+            margin-bottom: 10px;
+        }
+
+        .main .card p {
+            color: #000000;
+            line-height: 1.5;
+        }
+
+        .main .card button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(19,84,126);;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+
+
+        .main .card button:hover {
+            background-color: #ff6600;
+        }
+
+
+        /*footer*/
+        .pie-pagina{
+            width: 100%;
+            background-color: #0a141d;
+        }
+        .pie-pagina .grupo-1{
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            display:grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap:50px;
+            padding: 45px 0px;
+        }
+        .pie-pagina .grupo-1 .box figure{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .pie-pagina .grupo-1 .box figure img{
+            width: 250px;
+        }
+        .pie-pagina .grupo-1 .box h2{
+            color: #fff;
+            margin-bottom: 25px;
+            font-size: 20px;
+        }
+        .pie-pagina .grupo-1 .box p{
+            color: #efefef;
+            margin-bottom: 10px;
+        }
+        .pie-pagina .grupo-1 .red-social a{
+            display: inline-block;
+            text-decoration: none;
+            width: 45px;
+            height: 45px;
+            line-height: 45px;
+            color: #fff;
+            margin-right: 10px;
+            background-color: #0d2033;
+            text-align: center;
+            transition: all 300ms ease;
+        }
+        .pie-pagina .grupo-1 .red-social a:hover{
+            color: aqua;
+        }
+        .pie-pagina .grupo-2{
+            background-color: #0a1a2a;
+            padding: 10px 10px;
+            text-align: center;
+            color: #fff;
+        }
+        .pie-pagina .grupo-2 small{
+            font-size: 15px;
+        }
+        @media (max-width:700px){
+            .pie-pagina .grupo-1{
+                width: 90%;
+                grid-template-columns: repeat(1, 1fr);
+                grid-gap:30px;
+                padding: 35px 0px;
+            }
+
+            .nav{
+                width: 100%;
+                position: fixed;
+                z-index: 2;
+            }
+            
+            .nav_label{
+                display: block;
+                cursor: pointer;
+            }
+
+            .nav_menu{
+                position: fixed;
+                top: 80px;
+                bottom: 0;
+                background: #0d2033;
+                width: 100%;
+                left: 0;
+                display: flex;
+                justify-content: space-evenly;
+                flex-direction: column;
+                align-items: center;
+                clip-path: circle(0 at center);
+                z-index: 2;
+                transition: clip-path 1s ease-in-out;
+            }
+
+            .nav_input:checked + .nav_menu{
+                clip-path: circle(100% at center);
+            }
+        }
